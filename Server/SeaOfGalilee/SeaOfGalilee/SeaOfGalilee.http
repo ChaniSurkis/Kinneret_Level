@@ -1,0 +1,6 @@
+@SeaOfGalilee_HostAddress = http://localhost:5028
+
+GET {{SeaOfGalilee_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
