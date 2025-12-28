@@ -1,0 +1,68 @@
+:host {
+  display: block;
+  height: 100vh;
+  background-image: url('../../../assets/image (17).png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.main-title {
+  font-size: 5.5rem;
+  color: #f0f0f0;
+  border-radius: 19px;
+  border-color: #0288d1;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* מרכז אנכי ואופקי */
+  height: 100vh;
+  gap: 40px;
+}
+
+button {
+  width: 300px;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #0288d1 0%, #c9cadc 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(5, 101, 180, 0.7);
+  transition: background 0.3s ease;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #c8d3e0 0%, #0367b3 100%);
+  box-shadow: 0 8px 20px rgba(9, 115, 196, 0.9);
+}
+
+button::after {
+  content: '';
+  position: absolute; /* תיקון: לא fixed */
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%) rotate(-45deg);
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  padding: 7px;
+  transition: right 0.3s ease;
+}
+
+button:hover::after {
+  right: 12px;
+}

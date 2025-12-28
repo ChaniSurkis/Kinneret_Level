@@ -1,0 +1,211 @@
+/* בסיסי לעמוד */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;         /* כל גובה המסך */
+  overflow: hidden;   
+     /* לא לאפשר גלילה */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  direction: rtl;
+  background: #e6f4ff;
+}
+
+/* מיכל הטבלה */
+.table-container {
+  margin: 0 auto;
+  width: 400px;
+  background-color: #ffffffdd;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 80, 120, 0.2);
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+h1 {
+  font-size: 2.5rem;              /* טיפה יותר גדול */
+  font-weight: 500;              /* פחות כבד */
+  margin-bottom: 24px;
+  color: #01579b;                /* אותו צבע תכלת-כחול */
+  text-align: center;            /* מרכז את הכותרת */
+  font-family: 'Arial', sans-serif;  /* כתב מעוגל וידידותי */
+  letter-spacing: 0.5px;         /* מרווח אותיות קל */
+}
+
+/* טבלה */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.data-table thead {
+  background-color: #0288d1;
+  color: white;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid #cce7f0;
+  text-align: center;
+  width: 50%;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f1fafd;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.pagination button {
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination button:disabled {
+  background-color: #b0d4e3;
+  cursor: default;
+}
+
+.pagination span {
+  font-weight: bold;
+  color: #01579b;
+  font-size: 16px;
+}
+
+/* גל ים - מיכל */
+.waves-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 220px;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ה-SVG של הגלים */
+.waves {
+  position: relative;
+  width: 200vw; /* גדול משטח המסך לזרימה חלקה */
+  height: 100%;
+  animation: waveShift 20s linear infinite;
+}
+
+/* כל גל */
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200vw;
+  height: 100%;
+}
+
+/* גל 1 - צבע ותנועות */
+.wave1 {
+  fill-opacity: 0.7;
+  animation: waveShift 20s linear infinite, waveMoveY1 6s ease-in-out infinite;
+}
+
+/* גל 2 - צבע, שקיפות, תזמון שונה */
+.wave2 {
+  fill-opacity: 0.5;
+  animation: waveShift 25s linear infinite, waveMoveY2 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* גל 3 - שקיפות נוספת ותזמון */
+.wave3 {
+  fill-opacity: 0.4;
+  animation: waveShift 30s linear infinite, waveMoveY3 5s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* אנימציות גל אופקי */
+@keyframes waveShift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* אנימציות גל אנכי לכל גל בנפרד */
+@keyframes waveMoveY1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes waveMoveY2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes waveMoveY3 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+
+/* הגולש */
+
+/* הגולש */
+/* .surfer {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  font-size: 50px;
+  z-index: 5;
+
+  animation: surfMove 8s ease-in-out infinite, surfBob 4s ease-in-out infinite;
+} */
+
+/* תנועה אופקית (קדימה אחורה) */
+/* @keyframes surfMove {
+  0%   { transform: translateX(0vw); }
+  25%  { transform: translateX(25vw); }
+  50%  { transform: translateX(50vw); }
+  75%  { transform: translateX(75vw); }
+  100% { transform: translateX(100vw); }
+} */
+
+/* תנועה אנכית (עליות וירידות) כמו גלים */
+/* @keyframes surfBob {
+  0%   { transform: translateY(0px); }
+  25%  { transform: translateY(-10px); }
+  50%  { transform: translateY(0px); }
+  75%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+} */

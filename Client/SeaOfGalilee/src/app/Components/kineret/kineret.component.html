@@ -1,0 +1,30 @@
+<h2 class="chart-title">גרף לפי טווח תאריכים</h2>
+
+<div class="input-container">
+  <div class="range-block">
+    <label for="rangeSelect">בחר טווח:</label>
+    <select id="rangeSelect" [(ngModel)]="selectedRange" (change)="onRangeChange(selectedRange)">
+      <option value="" disabled hidden>בחר טווח</option>
+      <option value="week">שבוע אחרון</option>
+      <option value="month">חודש אחרון</option>
+      <option value="halfYear">חצי שנה אחרונה</option>
+      <option value="year">שנה אחרונה</option>
+    </select>
+  </div>
+  <div class="dates-row">
+  <div class="dates-block">
+    <div class="input-group">
+      <label>מתאריך:</label>
+      <input type="date" [(ngModel)]="startDate" [max]="today" />
+    </div>
+    <div class="input-group">
+      <label>עד תאריך:</label>
+      <input type="date" [(ngModel)]="endDate" [max]="today" />
+    </div>
+    </div>
+  </div>
+
+  <button (click)="loadChartByDates()">הצג גרף</button>
+</div>
+
+<canvas #kineretChart></canvas>

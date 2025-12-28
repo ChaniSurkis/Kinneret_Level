@@ -1,0 +1,100 @@
+/* ——— כותרת הגרף ——— */
+.chart-title {
+  text-align: center;
+  margin: 20px 0;
+  color: #ffffff;
+}
+canvas {
+  max-height: 400px;  /* גובה מקסימלי של הגרף */
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+/* ——— קונטיינר כללי של הקלטים והכפתור ——— */
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  direction: rtl;
+  justify-content: center;
+  gap: 3rem;                      /* ↑ רווח גדול יותר בין הFגשבלוקים */
+  margin-bottom: 0.1rem;
+
+  background: #0288d1;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+/* ——— בלוק הטווח ——— */
+.range-block {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  margin-inline-end: 2rem;        /* ↑ יותר מרחק מהבלוק הבא */
+}
+
+/* ——— בלוק התאריכים ——— */
+.dates-block {
+  display: flex;
+  flex-direction: column;  /* במקום column */
+  gap: 1rem;
+}
+
+
+/* ——— זוג Label + Input ——— */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* ——— אייקון לוח שנה ליד התווית ——— */
+.input-group label::before {
+  content: "📅";
+  margin-inline-start: 0.35rem;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+/* ——— תוויות ——— */
+label {
+  font-weight: 600;
+  color: #d1e4ff;
+}
+
+/* ——— Select + קלטי תאריך ——— */
+select,
+input[type='date'] {
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #0ac5f9;
+  background: #e0eaff;            /* רקע בהיר */
+  color: #0f1c3f;
+  transition: background 0.2s ease;
+}
+
+select:hover,
+select:focus,
+input[type='date']:hover,
+input[type='date']:focus {
+  background: #f4f8ff;
+}
+
+/* ——— כפתור ——— */
+button {
+  background: linear-gradient(90deg,#007bff 0%,#00c6ff 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;              /* ↓ גובה וכפתור קטן יותר */
+  font-size: 14px;                /* ↓ גודל טקסט קטן */
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: center;
+  transition: opacity 0.25s ease;
+}
+
+button:hover { opacity: 0.85; }

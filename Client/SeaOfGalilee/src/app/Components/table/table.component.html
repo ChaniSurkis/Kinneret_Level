@@ -1,0 +1,74 @@
+<h1>טבלת נתוני מפלס הכנרת</h1>
+<div class="table-container">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>תאריך מדידה</th>
+        <th>מפלס הכנרת (מטרים)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of pagedData">
+        <td>{{ row.Survey_Date }}</td>
+        <td>{{ row.Kinneret_Level }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button
+      (click)="setPage(currentPage - 1)"
+      [disabled]="currentPage === 1"
+    >
+      ‹
+    </button>
+
+    <span>עמוד {{ currentPage }}</span>
+
+    <button
+      (click)="setPage(currentPage + 1)"
+      [disabled]="currentPage * itemsPerPage >= kineretData.length"
+    >
+      ›
+    </button>
+  </div>
+</div>
+
+<div class="waves-wrapper">
+  <svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
+  ><path
+  class="wave wave1"
+  fill="#BDEFFF"
+  d="M0,180
+     C120,250 360,100 600,180
+     C840,260 1080,100 1320,180
+     C1440,260 1440,320 1440,320
+     L0,320 Z"
+/>
+
+ <path
+  class="wave wave2"
+  fill="#A8E1FF"
+  fill-opacity="0.7"
+  d="M0,200
+     C150,280 400,130 650,200
+     C900,270 1150,130 1400,200
+     L1440,320 L0,320 Z"
+/>
+
+    <path
+      class="wave wave3"
+      fill="#80CFFF"
+      fill-opacity="0.6"
+      d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,181.3C672,181,768,171,864,154.7C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L0,320Z"
+    />
+    
+  </svg>
+  <div class="surfer">🏄‍♂️</div>
+  
+
+</div>

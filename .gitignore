@@ -1,0 +1,17 @@
+# Angular / Client
+Client/SeaOfGalilee/node_modules
+Client/SeaOfGalilee/dist
+Client/SeaOfGalilee/.angular
+
+# Server build artifacts
+Server/SeaOfGalilee/.vs
+Server/SeaOfGalilee/SeaOfGalilee/bin
+Server/SeaOfGalilee/SeaOfGalilee/obj
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+# root gitignore 
