@@ -1,4 +1,5 @@
 # Kinneret Level  
+
 ### Water Data Visualization Project
 
 Kinneret Level is a data-driven project that retrieves and presents public water-level information from official government data sources, such as data.gov.
