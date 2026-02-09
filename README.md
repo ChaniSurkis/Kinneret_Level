@@ -2,7 +2,7 @@
 
 ### Water Data Visualization Project
 
-Kinneret Level is a data-driven project that retrieves and presents public water-level information from official government data sources, such as data.gov.
+Kinneret Level is a data-driven project that retrieves and presents public water-level information from official government data sources-data.gov.
 
 The project focuses on displaying up-to-date and historical water data in a clear and accessible way, combining a modern frontend with a structured backend.
 ---
